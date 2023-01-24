@@ -29,7 +29,11 @@ def edit_student():
     pass
 
 def delete_student():
-    pass
+    student_id = int(input("Введите id студента."))
+    global all_classes
+    global all_students
+    del all_classes[all_students[student_id][-1]][student_id]
+    del all_students[student_id]
 
 def change_class():
     pass
