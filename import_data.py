@@ -26,7 +26,16 @@ def create_cl(name_class=False):
     all_classes[name_class] = []
 
 def edit_student():
-    pass
+    student_id = input("Введите id ученика: ")
+    surname = input("Введите фамилию ученика: ")
+    name = input("Введите имя ученика: ")
+    otch = input("Введите отчество ученика: ")
+    birth = input("Введите дату рождения ученика: ")
+    tel = input("Введите телефон ученика: ")
+    adress = input("Введите адрес ученика: ")
+    class_name = all_students[student_id][-1]
+    new_st_data = [surname, name, otch, birth, tel, adress, class_name]
+    all_students[student_id] = new_st_data
 
 def delete_student():
     student_id = int(input("Введите id студента."))
